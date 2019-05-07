@@ -119,6 +119,18 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 
 /***/ }),
 
+/***/ "./src/add.js":
+/*!********************!*\
+  !*** ./src/add.js ***!
+  \********************/
+/*! exports provided: default, Calculate */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"Calculate\", function() { return Calculate; });\nclass Argument {\n  constructor(...args) {\n    this.args = args;\n  }\n}\n\nclass Calculate extends Argument {\n  add() {\n    return this.args.reduce((s, n) => (s += n), 0);\n  }\n\n  has(n) {\n    return this.args.includes(n);\n  }\n}\n\nconst add = a => b => a + b;\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (add);\n\n\n\n//# sourceURL=webpack:///./src/add.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -127,7 +139,7 @@ eval("module.exports = function(module) {\n\tif (!module.webpackPolyfill) {\n\t\
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n\n\nfunction component() {\n  const element = document.createElement(\"div\");\n\n  // Lodash, currently included via a script, is required for this line to work\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join([\"Hello\", \"webpack\"], \" \");\n\n  return element;\n}\n\ndocument.body.appendChild(component());\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _add__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./add */ \"./src/add.js\");\n\n\n\nfunction component() {\n  const element = document.createElement(\"div\");\n\n  // Lodash, currently included via a script, is required for this line to work\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join([\"Hello\", \"webpack\"], \" \");\n\n  return element;\n}\n\nfunction adder() {\n  const element = document.createElement(\"div\");\n\n  // Lodash, currently included via a script, is required for this line to work\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join([\"add(1)(8) =\", Object(_add__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(1)(8)], \" \");\n\n  return element;\n}\n\nfunction calcuate() {\n  const element = document.createElement(\"div\");\n\n  const c = new _add__WEBPACK_IMPORTED_MODULE_1__[\"Calculate\"](1, 2, 3);\n\n  // Lodash, currently included via a script, is required for this line to work\n  element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default.a.join([\"calcuate(1,2,3): \", c.add()], \" \");\n\n  return element;\n}\n\ndocument.body.appendChild(component());\ndocument.body.appendChild(adder());\ndocument.body.appendChild(calcuate());\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
