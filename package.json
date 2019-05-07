@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel src -d lib",
-    "s": "yarn build && node lib/index.js"
+    "b": "babel src -d lib",
+    "s": "yarn b && node lib/index.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
