@@ -1,0 +1,20 @@
+{
+  "name": "babel-cli-playground",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "b": "babel src -d lib",
+    "s": "yarn b && node lib/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/runtime-corejs3": "^7.4.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4"
+  }
+}
