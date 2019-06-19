@@ -41,16 +41,13 @@ blocks:
 
           # Use the version of Node.js specified in .nvmrc.
           # Semaphore provides nvm preinstalled.
-          - nvm use
-          - node --version
-          - npm --version
           - yarn --version
       jobs:
         - name: yarn
           commands:
             - cache restore node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock),node-modules-$SEMAPHORE_GIT_BRANCH,node-modules-master
             - yarn
-            - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.json) node_modules
+            - cache store node-modules-$SEMAPHORE_GIT_BRANCH-$(checksum yarn.lock) node_modules
 
   - name: Tests
     task:
@@ -62,9 +59,6 @@ blocks:
       prologue:
         commands:
           - checkout
-          - nvm use
-          - node --version
-          - npm --version
           - yarn --version
       jobs:
         - name: Babel Playground Tests
