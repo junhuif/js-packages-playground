@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "b": "babel src -d lib",
-    "s": "yarn b && node lib/index.js"
+    "s": "yarn b && node lib/index.js",
+    "ci": "yarn b"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
