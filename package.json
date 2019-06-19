@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "root",
+  "workspaces": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:junhuif/js-packages-playground.git",
+  "author": "junhui <junhuif@gmail.com>",
+  "license": "MIT"
+}
