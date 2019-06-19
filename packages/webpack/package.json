@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "b": "webpack",
-    "s": "yarn b && open index.html"
+    "s": "yarn b && open index.html",
+    "ci": "yarn b"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
